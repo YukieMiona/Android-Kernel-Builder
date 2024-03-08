@@ -78,6 +78,12 @@
       "STRIP":"llvm-strip",
       "LD":"ld.lld",
       "DTC_EXT":"dtc"
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/Shuery-Shuai/AnyKernel3",
+      "branch": "polaris"
     }
   },
   {
@@ -119,6 +125,12 @@
       "STRIP":"",
       "LD":"",
       "DTC_EXT":""
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/Shuery-Shuai/AnyKernel3",
+      "branch": "polaris"
     }
   }
 ]
