@@ -1,21 +1,22 @@
 [
   {
     "kernelSource": {
-      "name": "MarsKernel-KSU",
+      "name": "Star-KernelSU-Proton-release",
       "repo": "https://github.com/AOSP-KONA-MSMNILE-LAHAINA-KALAMA/kernel_xiaomi_sm8350",
       "branch": "uvite",
-      "device": "mars",
+      "device": "star",
       "defconfig": "vendor/star-qgki_defconfig"
     },
     "withKernelSU": true,
-  "toolchains": [
-  {
-    "repo": "https://github.com/kdrag0n/proton-clang",
-    "branch": "master",
-    "name": "proton-clang",
-    "binPath": ["./bin"]
-  }
-],
+    "toolchains": [
+      {
+        "repo": "https://github.com/kdrag0n/proton-clang",
+        "branch": "master",
+        "name": "proton-clang",
+        "binPath": ["bin"]
+      }
+    ],
+    "ccache": true,
     "params": {
       "ARCH": "arm64",
       "CC": "proton-clang/bin/clang",
@@ -38,51 +39,52 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/Shuery-Shuai/AnyKernel3",
-      "branch": "polaris"
+      "repo": "https://github.com/easterNday/AnyKernel3/",
+      "branch": "thyme"
     }
   },
-    {
+  {
     "kernelSource": {
-      "name": "MarsKernel-KSU",
+      "name": "Star-KernelSU-Proton-noanykernel-release",
       "repo": "https://github.com/AOSP-KONA-MSMNILE-LAHAINA-KALAMA/kernel_xiaomi_sm8350",
       "branch": "uvite",
-      "device": "mars",
+      "device": "star",
       "defconfig": "vendor/star-qgki_defconfig"
     },
-    "isConfiginvendor":true,
     "withKernelSU": true,
-    "useCustomtool":true,
-    "dtbPath":"boot/dts/qcom/sdmmagpie.dtb",
     "toolchains": [
       {
-        "repo": "https://github.com/SlackerState/kernel_bulid",
-        "branch": "main",
-        "name": "tools"
+        "repo": "https://github.com/kdrag0n/proton-clang",
+        "branch": "master",
+        "name": "proton-clang",
+        "binPath": ["bin"]
       }
     ],
+    "ccache": true,
     "params": {
       "ARCH": "arm64",
-      "CROSS_COMPILE": "aarch64-linux-android-",
-      "CROSS_COMPILE_ARM32": "arm-linux-androideabi-",
-      "CROSS_COMPILE_COMPAT":"",
-      "CLANG_TRIPLE": "aarch64-linux-gnu-",
-      "AR": "llvm-ar",
-      "CC": "clang",
-      "HOSTCC":"gcc",
-      "HOSTCXX":"clang++",
-      "NM":"llvm-nm" ,
-      "OBJCOPY":"llvm-objcopy",
-      "OBJDUMP":"llvm-objdump",
-      "STRIP":"llvm-strip",
-      "LD":"ld.lld",
-      "DTC_EXT":"dtc"
+      "CC": "proton-clang/bin/clang",
+      "externalCommand": {
+        "CROSS_COMPILE": "proton-clang/bin/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "proton-clang/bin/arm-linux-gnueabi-",
+        "LD": "proton-clang/bin/ld.lld",
+        "AR": "proton-clang/bin/llvm-ar",
+        "NM": "proton-clang/bin/llvm-nm",
+        "OBJCOPY": "proton-clang/bin/llvm-objcopy",
+        "OBJDUMP": "proton-clang/bin/llvm-objdump",
+        "READELF": "proton-clang/bin/llvm-readelf",
+        "OBJSIZE": "proton-clang/bin/llvm-size",
+        "STRIP": "proton-clang/bin/llvm-strip",
+        "LDGOLD": "proton-clang/bin/aarch64-linux-gnu-ld.gold",
+        "LLVM_AR": "proton-clang/bin/llvm-ar",
+        "LLVM_DIS": "proton-clang/bin/llvm-dis"
+      }
     },
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/Shuery-Shuai/AnyKernel3",
-      "branch": "polaris"
+      "repo": "https://github.com/easterNday/AnyKernel3/",
+      "branch": "thyme"
     }
   },
   {
