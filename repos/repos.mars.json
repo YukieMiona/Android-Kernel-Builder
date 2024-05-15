@@ -8,18 +8,14 @@
       "defconfig": "vendor/star-qgki_defconfig"
     },
     "withKernelSU": true,
-    "toolchains": [
-      {
-        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-        "branch": "master",
-        "name": "gas"
-      },
-      {
-        "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
-        "branch": "11",
-        "name": "clang"
-      }
-    ],
+  "toolchains": [
+  {
+    "repo": "https://github.com/kdrag0n/proton-clang",
+    "branch": "master",
+    "name": "proton-clang",
+    "binPath": ["./bin"]
+  }
+],
   "ccache": true,
     "params": {
       "ARCH": "arm64",
@@ -61,14 +57,9 @@
     "dtbPath":"boot/dts/qcom/sdmmagpie.dtb",
     "toolchains": [
       {
-        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-        "branch": "master",
-        "name": "gas"
-      },
-      {
-        "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
-        "branch": "11",
-        "name": "clang"
+        "repo": "https://github.com/SlackerState/kernel_bulid",
+        "branch": "main",
+        "name": "tools"
       }
     ],
     "params": {
@@ -143,4 +134,3 @@
     }
   }
 ]
-
