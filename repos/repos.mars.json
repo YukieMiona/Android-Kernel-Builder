@@ -5,7 +5,7 @@
       "repo": "https://github.com/AOSP-KONA-MSMNILE-LAHAINA-KALAMA/kernel_xiaomi_sm8350",
       "branch": "uvite",
       "device": "mars",
-      "defconfig": "star-stock_defconfig"
+      "defconfig": "vendor/star-qgki_defconfig"
     },
     "withKernelSU": true,
   "toolchains": [
@@ -49,7 +49,7 @@
       "repo": "https://github.com/AOSP-KONA-MSMNILE-LAHAINA-KALAMA/kernel_xiaomi_sm8350",
       "branch": "uvite",
       "device": "mars",
-      "defconfig": "star-stock_defconfig"
+      "defconfig": "vendor/star-qgki_defconfig"
     },
     "isConfiginvendor":true,
     "withKernelSU": true,
@@ -92,7 +92,7 @@
       "repo": "https://github.com/AOSP-KONA-MSMNILE-LAHAINA-KALAMA/kernel_xiaomi_sm8350",
       "branch": "uvite",
       "device": "mars",
-      "defconfig": "star-stock_defconfig"
+      "defconfig": "vendor/star-qgki_defconfig"
     },
     "isConfiginvendor":false,
     "withKernelSU": true,
